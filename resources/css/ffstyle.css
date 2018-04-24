@@ -1,0 +1,146 @@
+html {
+      box-sizing: border-box;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 8px;
+      font-weight: 400;
+    }
+    body {
+        margin: 0;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+    .panels {
+      min-height:100vh;
+      overflow: hidden;
+      display:flex;
+    }
+
+    .panel {
+      box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+      color:white;
+      text-align: center;
+      align-items:center;
+      /* Safari transitionend event.propertyName === flex */
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background-image 1.4s;
+      background-size:cover;
+      background-position:center;
+      flex: 1;
+      justify-content: center;
+      align-items:center;
+      display:flex;
+      flex-direction: column;
+    }
+    
+/* flex Items */
+    .panel > * {
+      margin:0;
+      width: 100%;
+      transition:transform 0.5s;
+      flex: 1 0 auto;
+      justify-content: center;
+      align-items:center;
+      display:flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+        padding:5px;
+    }
+
+    .panel > *:first-child {
+        transform: translateY(-200%);
+        height:20%;
+
+    }
+    .panel.open-active > *:first-child{
+        transform:translateY(0);
+        font-size: 1.5em;
+   
+    }
+    .panel > *:last-child {
+        transform: translateY(200%);
+        height:60%;
+        font-size: 1em;
+
+    }
+    .panel.open-active > *:last-child{
+        transform:translateY(0);
+    }
+    .panel p {
+      text-transform: uppercase;
+      font-family: 'Exo 2', sans-serif;
+      text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 1em;
+    }
+    /* .panel p:nth-child(1) {
+      font-size: 4em;
+    } */
+    .panel.open {
+      flex:8; 
+      font-size:20px;
+    }
+  .panel .frame {
+        display:block;
+        width:100%;
+        height:30%;
+    }
+    .panel .frame img {
+            max-width: 80%;
+            max-height: 80%;
+    }   
+     
+
+    .panel1 {background-image:url(https://www.carpixel.net/w/3f2362ba731c416e212f2ab320918e27/mercedes-amg-f1-w08-eq-power-plus-car-wallpaper-64526.jpg);}
+    .panel1:hover {
+        background-color: rgba(102, 102, 102, 0.5);
+        background-blend-mode: multiply;
+    }
+    .panel2 {background-image:url(https://maxf1-rwumydn.netdna-ssl.com/wp-content/uploads/2017/03/Raikkonen-Barcelona-F1-2017-test-Ferrari-SF70H-pitlane-Foto-Ferrari.jpg);}
+    .panel2:hover {
+        background-color: rgba(255, 0, 0, 0.5); 
+        background-blend-mode: multiply;
+    }
+    .panel3 {background-image:url(https://www.f1fanatic.co.uk/wp-content/uploads/2017/02/XPB_860166_HiRes.jpg);}
+    .panel3:hover {
+        background-color: rgba(22, 2, 138, 0.5);
+        background-blend-mode: multiply;
+    }
+    .panel4 {background-image:url(http://ltmsport.com/wp-content/uploads/2017/05/india.jpg);}
+    .panel4:hover {
+        background-color: rgba(207, 109, 226, 0.781);
+        background-blend-mode: multiply;
+    }
+    .panel5 {background-image:url(https://www.f1fanatic.co.uk/wp-content/uploads/2017/02/XPB_859815_HiRes.jpg);}
+    .panel5:hover {
+        background-color: rgba(37, 37, 37, 0.5);
+        background-blend-mode: multiply;
+    }
+    .panel6 {background-image:url(https://www.f1fanatic.co.uk/wp-content/uploads/2017/02/XPB_860524_HiRes.jpg);}
+    .panel6:hover {
+        background-color: rgba(31, 34, 202, 0.5);
+        background-blend-mode: multiply;
+    }
+    .panel7 {background-image:url(http://www.maxif1.com/wp-content/uploads/2016/11/Renault-Sport-Formula-One-Team-retains-Jolyon-Palmer-for-2017-2.jpg);}
+    .panel7:hover {
+        background-color: rgba(230, 233, 60, 0.5);
+        background-blend-mode: multiply;
+    }
+    .panel8 {background-image:url(https://www.f1fanatic.co.uk/wp-content/uploads/2017/02/XPB_859932_HiRes.jpg);}
+    .panel8:hover {
+        background-color: rgba(82, 3, 3, 0.5);
+        background-blend-mode: multiply;
+    }
+    .panel9 {background-image:url(https://www.formula1.com/content/fom-website/en/latest/features/2017/3/second-pre-season-test---the-latest-from-day-2-in-spain/_jcr_content/featureContent/image_2.img.jpg/1488966771716.jpg);}
+    .panel9:hover {
+        background-color: rgba(221, 94, 9, 0.5);
+        background-blend-mode: multiply;
+    }
+    .panel10 {background-image:url(https://www.f1fanatic.co.uk/wp-content/uploads/2017/03/XPB_862354_HiRes.jpg);}
+    .panel10:hover {
+        background-color: rgba(51, 82, 221, 0.5);
+        background-blend-mode: multiply;
+    }
